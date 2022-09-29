@@ -1,13 +1,13 @@
 let containerE1 = document.getElementById("container");
 let inputE1 = document.getElementById("color-in");
-
+let color=[];
 inputE1.addEventListener("keydown", handle);
 
 function handle(event) {
   if (event.keyCode === 13) {
-    let inputstr = inputE1.value;
-    let colorsarray = inputstr.split(",");
-    display(colorsarray);
+    color.push(inputE1.value);
+    inputE1.value = "";
+    display(color);
   }
 }
 
