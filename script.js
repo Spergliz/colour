@@ -11,7 +11,6 @@ function handle(event) {
   }
 }
 
-y;
 function display(colors) {
   let divstr = "";
   for (let i = 0; i < 6; i++) {
