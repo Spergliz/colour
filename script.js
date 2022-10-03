@@ -1,6 +1,7 @@
 let containerE1 = document.getElementById("container");
 let inputE1 = document.getElementById("color-in");
 let color=[];
+fetch("colors.txt").then(ConData).then(processdata) ;
 inputE1.addEventListener("keydown", handle);
 
 function handle(event) {
