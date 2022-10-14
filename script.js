@@ -1,8 +1,17 @@
 let containerE1 = document.getElementById("container");
 let inputE1 = document.getElementById("color-in");
-let color=[];
-fetch("colors.txt").then(ConData).then(processdata) ;
+let color = [];
+fetch("colours.txt").then(conData).then(processdata);
+
 inputE1.addEventListener("keydown", handle);
+function conData(rawdata) {
+  return rawdata.text();
+}
+function processdata (stringdata){
+ color = stringdata.split("\r\n");
+ display(color)
+}
+console.log("after fetch");
 
 function handle(event) {
   if (event.keyCode === 13) {
@@ -14,11 +23,8 @@ function handle(event) {
 
 function display(colors) {
   let divstr = "";
-  for (let i = 0; i < 6; i++) {
-    console.log(i);
-    divstr += `<div style= "background: ${colors[i]}"></div> `;
-    // containerE1.innerHTML = `<div style= "background: ${randcol}"></div>`;
-    console.log(divstr);
+  for (let i = 0; i < color.length; i++) {
+    divstr += `<div style= "background: ${colors[i]}">${color[i]}</div> `;
   }
   containerE1.innerHTML = divstr;
 }
