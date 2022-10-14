@@ -24,7 +24,9 @@ function handle(event) {
 function display(colors) {
   let divstr = "";
   for (let i = 0; i < color.length; i++) {
-    divstr += `<div style= "background: ${colors[i]}">${color[i]}</div> `;
+    if (color[i].length === ) {
+    divstr +=() `<div style= "background: ${colors[i]}">${color[i]}</div> `;
+    }
   }
   containerE1.innerHTML = divstr;
 }
