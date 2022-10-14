@@ -23,10 +23,12 @@ function handle(event) {
 
 function display(colors) {
   let divstr = "";
+  let Count = 0
   for (let i = 0; i < color.length; i++) {
-    if (color[i].length === ) {
-    divstr +=() `<div style= "background: ${colors[i]}">${color[i]}</div> `;
+    if (color[i].length ===6 ) {
+    divstr += `<div style= "background: ${colors[i]}">${color[i]}</div> `;
+    Count++;
     }
   }
-  containerE1.innerHTML = divstr;
+  containerE1.innerHTML = divstr + `<p>Count: ${Count}</p>`;
 }
