@@ -4,7 +4,6 @@ let color = [];
 fetch("colours.txt").then(conData).then(processdata);
 
 inputE1.addEventListener("keydown", handle);
-inputE1.addEventListener("submit", handle);
 function conData(rawdata) {
   return rawdata.text();
 }
@@ -15,15 +14,15 @@ function processdata(stringdata) {
 console.log("after fetch");
 
 function handle(event) {
-  if (event.keyCode === 13) {
-    if (color.includes(inputE1.value)) {
-      alert(`${inputE1.value} is in the array.`);
-    } else {
-      alert(`${inputE1.value} is not in the array.`);
-    }
-  }
-}
+  let divstr = "";
+  for(let i = -0; i < color.length; i++){
+    if (color[i].includes(inputE1.value)) {
 
+    }
+
+}
+containerE1.innerHTML
+} 
 function display(colors) {
   let divstr = "";
   let Count = 0;
