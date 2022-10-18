@@ -17,18 +17,18 @@ function handle(event) {
   let divstr = "";
   for(let i = -0; i < color.length; i++){
     if (color[i].includes(inputE1.value)) {
-
+      divstr += `<div style= "background: ${color[i]}">${color[i]}</div> `;
     }
 
 }
-containerE1.innerHTML
+containerE1.innerHTML = divstr
 } 
 function display(colors) {
   let divstr = "";
   let Count = 0;
   for (let i = 0; i < color.length; i++) {
     if (color[i].length === 6) {
-      divstr += `<div style= "background: ${colors[i]}">${color[i]}</div> `;
+      divstr += `<div style= "background: ${color[i]}">${color[i]}</div> `;
       Count++;
     }
   }
