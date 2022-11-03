@@ -11,7 +11,6 @@ function processdata(stringdata) {
   color = stringdata.split("\r\n");
   display(color);
 }
-console.log("after fetch");
 
 function handle(event) {
   let divstr = "";
